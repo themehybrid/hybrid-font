@@ -28,17 +28,17 @@ namespace Hybrid\Font;
 function register( $handle, array $args = [] ) {
 
 	$args = wp_parse_args( $args, [
-			// Arguments for https://developers.google.com/fonts/docs/getting_started
-			'family'  => [],
-			'subset'  => [],
-			'text'    => '',
-			'effect'  => [],
+		// Arguments for https://developers.google.com/fonts/docs/getting_started
+		'family'  => [],
+		'subset'  => [],
+		'text'    => '',
+		'effect'  => [],
 
-			// Arguments for `wp_register_style()`.
-			'depends' => [],
-			'version' => false,
-			'media'   => 'all',
-			'src'     => ''     // Will overwrite Google Fonts arguments.
+		// Arguments for `wp_register_style()`.
+		'depends' => [],
+		'version' => false,
+		'media'   => 'all',
+		'src'     => ''     // Will overwrite Google Fonts arguments.
 	] );
 
 	$url = url( $handle, $args );
