@@ -43,6 +43,25 @@ function register( $handle, array $args = [] ) {
 
 	$url = url( $handle, $args );
 
+	// If there's no src and we have a family, we're loading from Google Fonts.
+	if ( ! $args['src'] && $args['family'] ) {
+
+		// Automatically filter `wp_resource_hints` to preload fonts.
+		add_filter( 'wp_resource_hints', function( $urls, $relation_type ) use ( $handle ) {
+
+			if ( 'preconnect' === $relation_type && is( $handle, 'queue' ) ) {
+
+				$urls[] = [
+					'href' => 'https://fonts.gstatic.com',
+					'crossorigin'
+				];
+			}
+
+			return $urls;
+
+		}, 10, 2 );
+	}
+
 	return wp_register_style(
 		"{$handle}-font",
 		$url,
