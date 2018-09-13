@@ -9,6 +9,7 @@ The idea for this package came from a [tutorial on adding Google Fonts](https://
 
 ## Requirements
 
+* WordPress 4.9+.
 * PHP 5.6+ (preferably 7+)
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
@@ -24,13 +25,13 @@ The following docs are written with theme authors in mind because that'll be the
 
 First, you'll need to open your command line tool and change directories to your theme folder.
 
-```
+```bash
 cd path/to/wp-content/themes/<your-theme-name>
 ```
 
 Then, use Composer to install the package.
 
-```
+```bash
 composer require justintadlock/hybrid-font
 ```
 
@@ -38,7 +39,7 @@ Assuming you're not already including the Composer autoload file for your theme 
 
 The Composer autoload file will automatically load up Hybrid Font for you and make its code available for you to use.
 
-```
+```php
 if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 	require_once( get_parent_theme_file_path( 'vendor/autoload.php' ) );
 }
@@ -48,7 +49,7 @@ if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 
 If manually installing the package, you simply need to put it in the desired location in your theme and include the bootstrap file like so:
 
-```
+```php
 require_once( get_parent_theme_file_path( 'path/to/hybrid-font/src/bootstrap-font.php' ) );
 ```
 
@@ -56,7 +57,7 @@ require_once( get_parent_theme_file_path( 'path/to/hybrid-font/src/bootstrap-fon
 
 The primary function that you'll want to use is the `enqueue()` function.  You'd load a font like in the following example.
 
-```
+```php
 add_action( 'wp_enqueue_scripts', function() {
 
 	Hybrid\Font\enqueue( 'themeslug', [
@@ -100,7 +101,7 @@ See the [Google Fonts documentation](https://developers.google.com/fonts/docs/ge
 
 ### Functions
 
-```
+```php
 // Register and load a font stylesheet.
 enqueue( $handle, $args = [] );
 
@@ -110,3 +111,13 @@ register( $handle, $args = [] );
 // Build a font stylesheet URL.
 url( $handle, $args = [] );
 ```
+
+### Preloading
+
+This package will automatically filter `wp_resource_hints` and preload Google Fonts. There's no need to do this yourself.
+
+## Copyright and License
+
+This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
+
+2018 &copy; [Justin Tadlock](http://justintadlock.com).
