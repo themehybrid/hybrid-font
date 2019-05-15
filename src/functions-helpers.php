@@ -30,13 +30,14 @@ function register( $handle, array $args = [] ) {
 	$args = wp_parse_args( $args, [
 		// Arguments for https://developers.google.com/fonts/docs/getting_started
 		'family'  => [],
+		'display' => '',
 		'subset'  => [],
 		'text'    => '',
 		'effect'  => [],
 
 		// Arguments for `wp_register_style()`.
 		'depends' => [],
-		'version' => false,
+		'version' => null,
 		'media'   => 'all',
 		'src'     => ''     // Will overwrite Google Fonts arguments.
 	] );
@@ -178,14 +179,27 @@ function url( $handle, array $args = [] ) {
 
 	if ( ! $font_url ) {
 
-		$family = apply_filters( "hybrid/font/{$handle}/family", $args['family'] );
-		$subset = apply_filters( "hybrid/font/{$handle}/subset", $args['subset'] );
-		$text   = apply_filters( "hybrid/font/{$handle}/text",   $args['text']   );
-		$effect = apply_filters( "hybrid/font/{$handle}/effect", $args['effect'] );
+		$family  = apply_filters( "hybrid/font/{$handle}/family",  $args['family']  );
+		$subset  = apply_filters( "hybrid/font/{$handle}/subset",  $args['subset']  );
+		$text    = apply_filters( "hybrid/font/{$handle}/text",    $args['text']    );
+		$effect  = apply_filters( "hybrid/font/{$handle}/effect",  $args['effect']  );
+		$display = apply_filters( "hybrid/font/{$handle}/display", $args['display'] );
 
 		if ( $family ) {
 
 			$query_args['family'] = implode( '|', (array) $family );
+
+			$allowed_display = [
+				'auto',
+				'block',
+				'swap',
+				'fallback',
+				'optional'
+			];
+
+			if ( $display && in_array( $display, $allowed_display ) ) {
+				$query_args['display'] = $display;
+			}
 
 			if ( $subset ) {
 				$query_args['subset'] = implode( ',', (array) $subset );
