@@ -89,6 +89,7 @@ The first parameter is the handle/ID for the font. This should be a unique strin
 The `$args` parameter is an array of options that you may set.  The arguments
 
 * `family` - Array of Google-style font families that you wish to load.
+* `display` - String to set the `font-display` CSS property.
 * `subset` - Array of Google script subsets.
 * `text` - String of specific text you want Google to load the font for.
 * `effect` - Array of Google font effects.
@@ -120,4 +121,4 @@ This package will automatically filter `wp_resource_hints` and preload Google Fo
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2018 &copy; [Justin Tadlock](http://justintadlock.com).
+2018-2019 &copy; [Justin Tadlock](http://justintadlock.com).
