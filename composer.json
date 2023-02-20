@@ -6,10 +6,10 @@
 	"license"     : "GPL-2.0-or-later",
 	"authors"     : [
 		{
-			"name"     : "Justin Tadlock",
-			"email"    : "justintadlock@gmail.com",
-			"homepage" : "http://justintadlock.com",
-			"role"     : "Developer"
+			"name": "Theme Hybrid",
+			"email": "themehybrid@gmail.com",
+			"homepage": "https://themehybrid.com",
+			"role": "Developer"
 		}
 	],
 	"support"     : {
