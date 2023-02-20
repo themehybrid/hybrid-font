@@ -10,7 +10,7 @@ The idea for this package came from a [tutorial on adding Google Fonts](https://
 ## Requirements
 
 * WordPress 4.9+.
-* PHP 5.6+ (preferably 7+)
+* PHP 7.4+ (preferably 8+)
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 Technically, you could make this work without Composer by directly downloading and dropping the package into your theme.  However, using Composer is ideal and the supported method for using this project.
