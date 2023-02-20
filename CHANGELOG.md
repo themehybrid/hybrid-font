@@ -1,6 +1,6 @@
 # Change Log
 
-You can see the changes made via the [commit log](https://github.com/justintadlock/hybrid-font/commits/master) for the latest release.
+You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-font/commits/master) for the latest release.
 
 ## [1.1.0] - 2019-05-15
 

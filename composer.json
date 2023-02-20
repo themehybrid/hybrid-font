@@ -1,5 +1,5 @@
 {
-	"name": "justintadlock/hybrid-font",
+	"name": "themehybrid/hybrid-font",
 	"description": "Helper functions for loading font stylesheets in WordPress themes.",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
@@ -13,9 +13,9 @@
 			"role": "Developer"
 		}
 	],
-	"homepage": "https://github.com/justintadlock/hybrid-font",
+	"homepage": "https://github.com/themehybrid/hybrid-font",
 	"support": {
-		"issues": "https://github.com/justintadlock/hybrid-font/issues",
+		"issues": "https://github.com/themehybrid/hybrid-font/issues",
 		"forum": "https://themehybrid.com/board/topics"
 	},
 	"require": {
