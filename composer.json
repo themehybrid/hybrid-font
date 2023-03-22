@@ -1,27 +1,29 @@
 {
-	"name"        : "justintadlock/hybrid-font",
-	"description" : "Helper functions for loading font stylesheets in WordPress themes.",
-	"keywords"    : [ "wordpress" ],
-	"homepage"    : "https://github.com/justintadlock/hybrid-font",
-	"license"     : "GPL-2.0-or-later",
-	"authors"     : [
+	"name": "themehybrid/hybrid-font",
+	"description": "Helper functions for loading font stylesheets in WordPress themes.",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress"
+	],
+	"authors": [
 		{
-			"name"     : "Justin Tadlock",
-			"email"    : "justintadlock@gmail.com",
-			"homepage" : "http://justintadlock.com",
-			"role"     : "Developer"
+			"name": "Theme Hybrid",
+			"email": "themehybrid@gmail.com",
+			"homepage": "https://themehybrid.com",
+			"role": "Developer"
 		}
 	],
-	"support"     : {
-		"issues" : "https://github.com/justintadlock/hybrid-font/issues",
-		"forum"  : "https://themehybrid.com/board/topics"
+	"homepage": "https://github.com/themehybrid/hybrid-font",
+	"support": {
+		"issues": "https://github.com/themehybrid/hybrid-font/issues",
+		"forum": "https://themehybrid.com/board/topics"
 	},
-	"autoload"    : {
-		"files" : [
+	"require": {
+		"php": ">=7.4"
+	},
+	"autoload": {
+		"files": [
 			"src/bootstrap-font.php"
 		]
-	},
-	"require"     : {
-		"php" : ">=5.6"
 	}
 }

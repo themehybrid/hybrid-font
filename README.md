@@ -10,7 +10,7 @@ The idea for this package came from a [tutorial on adding Google Fonts](https://
 ## Requirements
 
 * WordPress 4.9+.
-* PHP 5.6+ (preferably 7+)
+* PHP 7.4+ (preferably 8+)
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 Technically, you could make this work without Composer by directly downloading and dropping the package into your theme.  However, using Composer is ideal and the supported method for using this project.
@@ -32,7 +32,7 @@ cd path/to/wp-content/themes/<your-theme-name>
 Then, use Composer to install the package.
 
 ```bash
-composer require justintadlock/hybrid-font
+composer require themehybrid/hybrid-font
 ```
 
 Assuming you're not already including the Composer autoload file for your theme and are shipping this as part of your theme package, you'll want something like the following bit of code in your theme's `functions.php` to autoload this package (and any others).
@@ -121,4 +121,4 @@ This package will automatically filter `wp_resource_hints` and preload Google Fo
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2018-2019 &copy; [Justin Tadlock](http://justintadlock.com).
+2008&thinsp;&ndash;&thinsp;2023 &copy; [Theme Hybrid](https://themehybrid.com).
