@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootsraps the project.
+ * Bootstraps the project.
  *
  * @package   HybridFont
  * @link      https://github.com/themehybrid/hybrid-font

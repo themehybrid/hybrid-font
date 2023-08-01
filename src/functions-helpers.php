@@ -30,18 +30,18 @@ namespace Hybrid\Font;
 function register( $handle, array $args = [] ) {
 
     $args = wp_parse_args( $args, [
-        // Arguments for https://developers.google.com/fonts/docs/getting_started
-        'family'  => [],
-        'display' => '',
-        'subset'  => [],
-        'text'    => '',
-        'effect'  => [],
 
         // Arguments for `wp_register_style()`.
         'depends' => [],
-        'version' => null,
+        'display' => '',
+        'effect'  => [],
+        // Arguments for https://developers.google.com/fonts/docs/getting_started
+        'family'  => [],
         'media'   => 'all',
         'src'     => '', // Will overwrite Google Fonts arguments.
+        'subset'  => [],
+        'text'    => '',
+        'version' => null,
     ] );
 
     $url = url( $handle, $args );
@@ -61,7 +61,6 @@ function register( $handle, array $args = [] ) {
             }
 
             return $urls;
-
         }, 10, 2 );
     }
 
