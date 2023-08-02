@@ -2,6 +2,13 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-font/commits/master) for the latest release.
 
+## [1.1.2] - 2023-08-02
+
+### Changed
+
+- Lint php files
+- Update license link
+
 ## [1.1.1] - 2023-02-20
 
 ### Changed
