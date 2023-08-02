@@ -26,7 +26,7 @@ All text strings follow U.S. English by default.  While such guides are generall
 
 ## Licensing
 
-Any code contributed to this project via patches, pull requests, or other means will be licensed under the [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) or later.  By contributing code to the project, you provide consent to use such code under this license.  The exception to this rule is when bringing in third-party code with an alternate open source license.
+Any code contributed to this project via patches, pull requests, or other means will be licensed under the [GPL version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) or later.  By contributing code to the project, you provide consent to use such code under this license.  The exception to this rule is when bringing in third-party code with an alternate open source license.
 
 ## Versioning
 
