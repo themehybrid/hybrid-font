@@ -21,9 +21,14 @@
 	"require": {
 		"php": ">=7.4"
 	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"autoload": {
 		"files": [
 			"src/bootstrap-font.php"
 		]
+	},
+	"config": {
+		"sort-packages": true
 	}
 }
