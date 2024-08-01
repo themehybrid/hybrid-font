@@ -2,6 +2,16 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-font/commits/master) for the latest release.
 
+## [1.1.3] - 2024-08-01
+
+### Changed
+
+- Add composer minimum-stability to "dev"
+- Add composer prefer-stable to true
+- Add composer sort-packages configuration
+- Update copyright date
+- Update lint php
+
 ## [1.1.2] - 2023-08-02
 
 ### Changed

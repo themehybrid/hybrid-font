@@ -10,7 +10,7 @@
  * @link      https://github.com/themehybrid/hybrid-font
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -19,13 +19,11 @@ namespace Hybrid\Font;
 /**
  * Registers a font.
  *
- * @since  5.0.0
- * @param  string $handle
- * @param  array  $args
+ * @param string $handle
+ * @param array  $args
  * @return bool
  *
  * @uses   wp_register_style()
- * @access public
  */
 function register( $handle, array $args = [] ) {
 
@@ -50,7 +48,7 @@ function register( $handle, array $args = [] ) {
     if ( ! $args['src'] && $args['family'] ) {
 
         // Automatically filter `wp_resource_hints` to preload fonts.
-        add_filter( 'wp_resource_hints', static function( $urls, $relation_type ) use ( $handle ) {
+        add_filter( 'wp_resource_hints', static function ( $urls, $relation_type ) use ( $handle ) {
 
             if ( 'preconnect' === $relation_type && is( $handle, 'queue' ) ) {
 
@@ -70,12 +68,10 @@ function register( $handle, array $args = [] ) {
 /**
  * Deregisters a registered font.
  *
- * @since  5.0.0
- * @param  string $handle
+ * @param string $handle
  * @return void
  *
  * @uses   wp_deregister_style()
- * @access public
  */
 function deregister( $handle ) {
 
@@ -86,13 +82,11 @@ function deregister( $handle ) {
  * Enqueue a registered font.  If the font is not registered, pass the `$args` to
  * register it.  See `register_font()`.
  *
- * @since  5.0.0
- * @param  string $handle
- * @param  array  $args
+ * @param string $handle
+ * @param array  $args
  * @return void
  *
  * @uses   wp_enqueue_style()
- * @access public
  */
 function enqueue( $handle, array $args = [] ) {
 
@@ -106,12 +100,10 @@ function enqueue( $handle, array $args = [] ) {
 /**
  * Dequeues a font.
  *
- * @since  5.0.0
- * @param  string $handle
+ * @param string $handle
  * @return void
  *
  * @uses   wp_dequeue_style()
- * @access public
  */
 function dequeue( $handle ) {
 
@@ -121,13 +113,11 @@ function dequeue( $handle ) {
 /**
  * Checks a font's status.
  *
- * @since  5.0.0
- * @param  string $handle
- * @param  string $list
+ * @param string $handle
+ * @param string $list
  * @return bool
  *
  * @uses   wp_style_is()
- * @access public
  */
 function is( $handle, $list = 'enqueued' ) {
 
@@ -137,11 +127,8 @@ function is( $handle, $list = 'enqueued' ) {
 /**
  * Checks if a font is registered.
  *
- * @since  5.0.0
- * @param  string $handle
+ * @param string $handle
  * @return bool
- *
- * @access public
  */
 function is_registered( $handle ) {
 
@@ -151,11 +138,8 @@ function is_registered( $handle ) {
 /**
  * Checks if a font is enqueued.
  *
- * @since  5.0.0
- * @param  string $handle
+ * @param string $handle
  * @return bool
- *
- * @access public
  */
 function is_enqueued( $handle ) {
 
@@ -167,12 +151,9 @@ function is_enqueued( $handle ) {
  * will call `urlencode_deep()`, so we're going to leaving the encoding to
  * that function.
  *
- * @since  5.0.0
- * @param  string $handle
- * @param  array  $args
+ * @param string $handle
+ * @param array  $args
  * @return void
- *
- * @access public
  */
 function url( $handle, array $args = [] ) {
 
